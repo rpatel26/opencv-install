@@ -4,7 +4,7 @@ path=~
 
 all:
 		make dependencies
-		cd $(path); wget -O opencv.zip https://github.com/opencv/opencv/archive/3.3.1.zip; unzip opencv.zip; mkdir build; cd build; cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local ..; make -j3; sudo make install
+		cd $(path); wget -O opencv.zip https://github.com/opencv/opencv/archive/3.3.1.zip; unzip opencv.zip; cd ./opencv-3.3.1; mkdir build; cd build; cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local ..; make -j3; sudo make install
 
 # the following target will install and download opencv from the web
 installOpenCV:
